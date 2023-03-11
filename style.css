@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sidebar{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#3d3c3c 0%,#3d3c3c 130px,#d9dbd5 130px,#d9dbd5 100%);
+}
+.chat-container{
+    position: relative;
+    width: 1396px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background: #e7e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.06), 0 2px 5px rgba(0,0,0,0.06) ;
+    display: flex;
+}
+.chat-container .leftside{
+    position: relative;
+    flex: 15%;
+    background: black;
+}
+.chat-container .rightside{
+    position: relative;
+    flex: 70%;
+    background: #fff;
+}
+.chat-container .rightside::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://theabbie.github.io/blog/assets/official-whatsapp-background-image.jpg');
+    opacity: 0.06;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #ededed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+.userImg{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nav-icons{
+    display: flex;
+}
+.nav-icons li{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: #51585c;
+    font-size: 1.1em;
+    margin-left: 22px;
+}
+.chatlist{
+    position: relative;
+    height: calc(100% - 110px);
+    overflow-y: auto;
+    background: #222222;
+}
+.chatlist .block{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding:15px;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+.chatlist .block:hover{
+    background: #464647 !important;
+}
+.active{
+    background: #4f4f50 !important;
+}
+.chatlist .block .imgBox{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.details{
+    margin-left: 5px;
+}
+.chatlist .block .details .listHead{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.chatlist .block .details .listHead h4{
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #f0efef;
+}
+.chatlist .block .details .listHead .time{
+    margin-top: 4px;
+    font-size: 0.75em;
+    color: #f3f1f1;
+}
+.message-p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message-p p{
+    color: #f3f1f1;
+     display: -webkit-box;
+     -webkit-line-clamp:1;
+     font-size: 0.9em;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+.message-p b{
+    background: white;
+    color: #222222;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    font-size: 0.75em;
+}
+.rightside{
+    border-top: none !important;
+    border: 1px solid rgb(190, 187, 187);
+}
+.imgText{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgText h4{
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-left: 15px;
+}
+.imgText h4 span{
+    font-size: 0.8em;
+    color: black;
+}
+
+/* chat-box */
+.chatBox{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 50px;
+    overflow-y: auto;
+}
+.message{
+    position: relative;
+    display: flex;
+    widows: 100%;
+    margin: 5px 0;
+}
+.message p{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+.message p::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background:linear-gradient(125deg,black 0%,black 50%,transparent 55%,transparent);
+}
+.message p span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    opacity: 0.5;
+}
+.my-message{
+    justify-content: end;
+}
+.frnd-message{
+    justify-content: start;
+}
+.frnd-message p{
+    background: #d8d6d6;
+    color: black;
+    text-align-last: left;
+}
+.frnd-message p::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    background:linear-gradient(225deg,#d8d6d6 0%,#d8d6d6 50%,transparent 55%,transparent) !important;
+}
+.chatbox-input{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background: #ededed;
+    border-top: 1px solid rgb(223, 219, 219);
+}
+
+.send{
+    cursor:pointer;
+    font-size: 25px;
+}
+.chatbox-input input{
+    margin-top: 10px;
+    position: relative;
+    width: 70%;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius:10px;
+    font-size: 1em;
+}
